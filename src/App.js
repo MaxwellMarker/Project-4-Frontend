@@ -1,8 +1,8 @@
 import React from "react";
-import { BrowserRouter, Redirect, Route } from "react-router-dom";
-import Main from './components/Main';
-import Show from './components/Show';
-import New from './components/New';
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import Main from "./components/Main";
+import Show from "./components/Show";
+import New from "./components/New";
 
 require("dotenv").config();
 
@@ -20,27 +20,29 @@ export default function App() {
       path: "/new",
       exact: true,
       component: New,
-      key: "new"
+      key: "new",
     },
     {
       path: "/recipes/:id",
       component: Show,
-      key: "show"
-    }
+      key: "show",
+    },
   ];
   return (
     <BrowserRouter>
-      {routes.map((route) => {
-        return (
-          <Route
-            component={route.component}
-            path={route.path}
-            key={route.key}
-            exact={route.exact}
-          />
+      <Switch>
+        {routes.map((route) => {
+          return (
+            <Route
+              component={route.component}
+              path={route.path}
+              key={route.key}
+              exact={route.exact}
+            />
           );
         })}
         <Redirect from="/" to="/recipes" />
+      </Switch>
     </BrowserRouter>
   );
 }
