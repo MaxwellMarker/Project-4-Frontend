@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Redirect, Route } from "react-router-dom";
 import Main from './components/Main';
 import Show from './components/Show';
 import New from './components/New';
@@ -26,7 +26,7 @@ export default function App() {
       path: "/recipes/:id",
       component: Show,
       key: "show"
-    },
+    }
   ];
   return (
     <BrowserRouter>
@@ -38,8 +38,9 @@ export default function App() {
             key={route.key}
             exact={route.exact}
           />
-        );
-      })}
+          );
+        })}
+        <Redirect from="/" to="/recipes" />
     </BrowserRouter>
   );
 }
