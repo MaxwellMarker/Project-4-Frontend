@@ -16,7 +16,7 @@ export default function New(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/recipes', formData);
+      const response = await axios.post('https://half-baked-api.herokuapp.com/recipes', formData);
       console.log(response)
       props.history.push("/recipes")
     } catch (error) {

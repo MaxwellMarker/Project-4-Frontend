@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get("http://localhost:3000/recipes");
+        const response = await axios.get("https://half-baked-api.herokuapp.com/recipes");
         const data = await response.data;
         updateRecipes([...data]);
       } catch (error) {

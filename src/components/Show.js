@@ -13,7 +13,7 @@ export default function Show(props) {
     (async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/recipes/${props.match.params.id}`
+          `https://half-baked-api.herokuapp.com/recipes/${props.match.params.id}`
         );
         const data = await response.data;
         updateRecipe({ ...data });
