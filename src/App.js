@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import Main from './components/Main';
+import Show from './components/Show';
+import New from './components/New';
 
-function App() {
+require("dotenv").config();
+
+export default function App() {
+  // ROUTES ================================== //
+
+  const routes = [
+    {
+      path: "/recipes",
+      exact: true,
+      component: Main,
+      key: "main",
+    },
+    {
+      path: "/new",
+      exact: true,
+      component: New,
+      key: "new"
+    },
+    {
+      path: "/recipes/:id",
+      component: Show,
+      key: "show"
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {routes.map((route) => {
+        return (
+          <Route
+            component={route.component}
+            path={route.path}
+            key={route.key}
+            exact={route.exact}
+          />
+        );
+      })}
+    </BrowserRouter>
   );
 }
-
-export default App;

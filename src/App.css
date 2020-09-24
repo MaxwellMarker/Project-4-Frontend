@@ -1,33 +1,116 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  color: white;
+  border-radius: 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 50px;
+  padding: 0 30px;
+  background-color: rgb(199, 80, 72);
+  margin: 0;
+  box-shadow: 0 0 15px rgba(40, 40, 40, .8), 0 0 4px rgb(0, 0, 0);
+  line-height: 50px;
+  border-bottom: 5px solid black;
+  border-top: 5px solid black;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.homeLink {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 40px;
+  width: 70px;
+  line-height: 40px;
+  border-radius: 5px;
+  text-align: center;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.recipeContainer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
+.recipeDiv {
+  height: 250px;
+  width: 250px;
+  margin: 10px;
+  border: solid 5px black;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.gradient {
+  width: 100%;
+  height: 20px;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, .8));
+}
+.nameFlex {
+  background-color: rgba(0, 0, 0, .8);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recipeName {
+  color: white;
+  font-size: 20px;
+}
+.new {
+  justify-content: center;
+}
+.newLabel {
+  color: black;
+  text-align: center;
+}
+.showDiv {
+  margin: 15vh auto;
+  width: 80%;
+  border: 5px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: black;
+}
+.showBox {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 300px;
+  min-width: 250px;
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+  border: 5px solid black;
+  border-radius: 8px;
+}
+.showInfo {
+  background-color: black;
+  color: white;
+}
+.newForm {
+  width: 90%;
+  height: 400px;
+  margin: 50px auto;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
