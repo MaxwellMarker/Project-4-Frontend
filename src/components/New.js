@@ -27,6 +27,7 @@ export default function New(props) {
     <Layout>
       <div className="newForm">
         <form onSubmit={handleSubmit}>
+          <h1>New Recipe</h1>
           <input
             type="text"
             placeholder="name"
@@ -41,15 +42,13 @@ export default function New(props) {
             onChange={handleChange}
             value={formData.img}
           />
-          <input
-            type="text"
+          <textarea
             placeholder="ingredients"
             name="ingredients"
             onChange={handleChange}
             value={formData.ingredients}
           />
-          <input
-            type="text"
+          <textarea
             placeholder="directions"
             name="directions"
             onChange={handleChange}

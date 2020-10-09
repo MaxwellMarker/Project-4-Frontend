@@ -88,9 +88,9 @@ header {
 }
 .showBox {
   width: 50%;
+  min-height: 325px;
   box-sizing: border-box;
   padding: 10px;
-  height: 300px;
   min-width: 250px;
   background-size: cover;
   background-position: center;
@@ -110,6 +110,36 @@ header {
 form {
   display: flex;
   flex-direction: column;
+  min-width: 300px;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: black;
+  border-radius: 8px;
+}
+form h1 {
+  background-color: transparent;
+  text-align: center;
+}
+input {
+  margin: 10px auto;
+  width: 90%;
+}
+textarea {
+  resize: vertical;
+  margin: 10px auto;
+  width: 90%;
+}
+input[type=submit] {
+  width: 150px;
+}
+p {
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 5px;
+}
+h3 {
+  margin-top: 5px;
 }
 @keyframes App-logo-spin {
   from {

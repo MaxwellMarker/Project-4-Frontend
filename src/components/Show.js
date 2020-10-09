@@ -27,7 +27,9 @@ export default function Show(props) {
       <div className="showDiv">
         <div className='showBox showInfo'>
           <h2>{recipe.name}</h2>
+          <h3>Ingredients</h3>
           <p>{recipe.ingredients}</p>
+          <h3>Directions</h3>
           <p>{recipe.directions}</p>
         </div>
         <div className='showBox' style={{ backgroundImage: `url(${recipe.img})` }} />
