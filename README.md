@@ -1,7 +1,3 @@
-# LIVE PROJECT LINK
-
-https://half-baked.herokuapp.com/recipes
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
